@@ -18,6 +18,7 @@ import WalletConnectIcon from '../../assets/images/walletConnectIcon.svg'
 import FortmaticIcon from '../../assets/images/fortmaticIcon.png'
 import PortisIcon from '../../assets/images/portisIcon.png'
 import LatticeIcon from '../../assets/images/gridPlusWallet.png'
+import LedgerIcon from '../../assets/images/ledger.svg'
 import Identicon from '../Identicon'
 import { ButtonSecondary } from '../Button'
 import { ExternalLink as LinkIcon } from 'react-feather'
@@ -264,7 +265,7 @@ export default function AccountDetails({
     }  else if (connector === ledger) {
       return (
         <IconWrapper size={16}>
-          <img src={PortisIcon} alt={'ledger logo'} />
+          <img src={LedgerIcon} alt={'ledger logo'} />
         </IconWrapper>
       )
     } else if (connector === walletlink) {
