@@ -4,6 +4,7 @@ import { WalletConnectConnector } from '@sushi-web3-react/walletconnect-connecto
 import { WalletLinkConnector } from '@sushi-web3-react/walletlink-connector'
 import { PortisConnector } from '@sushi-web3-react/portis-connector'
 import { LatticeConnector } from '@sushi-web3-react/lattice-connector'
+import { LedgerConnector } from '@sushi-web3-react/ledger-connector'
 
 import { FortmaticConnector } from './Fortmatic'
 import { NetworkConnector } from './NetworkConnector'
@@ -44,6 +45,13 @@ export const lattice = new LatticeConnector({
   chainId: NETWORK_CHAIN_ID,
   url: NETWORK_URL,
   appName: 'SushiSwap'
+})
+
+// mainnet only
+export const ledger = new LedgerConnector({
+  chainId: 1,
+  url: NETWORK_URL,
+  pollingInterval: 15000
 })
 
 // mainnet only
